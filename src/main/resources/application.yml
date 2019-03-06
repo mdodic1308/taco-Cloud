@@ -1,4 +1,14 @@
 taco:  
   orders:    
     pageSize: 10
-spring:  data:    rest:      base-path: /api
+spring:  data:    rest:      base-path: /api  rabbitmq:    template:      receive-timeout: 30000
+  main:    web-application-type: none 
+tacocloud:
+  email:
+    host: imp.tacocloud.com
+    mailbox: INBOX
+    username: taco-in-flow
+    password: 1L0v3T4c0s
+    poll-rate: 10000
+  api:
+    url: http://api.tacocloud.com
